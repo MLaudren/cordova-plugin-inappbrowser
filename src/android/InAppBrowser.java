@@ -579,9 +579,9 @@ public class InAppBrowser extends CordovaPlugin {
             if (hidden != null) {
                 openWindowHidden = hidden.equals("yes") ? true : false;
             }
-            Boolean sslValidation = features.get(VALIDATE_SSL);
+            String sslValidation = features.get(VALIDATE_SSL);
             if(sslValidation != null) {
-            	validateSsl = sslValidation.booleanValue();
+            	validateSsl = sslValidation.equals("yes") ? true : false;
             }
             String hardwareBack = features.get(HARDWARE_BACK_BUTTON);
             if (hardwareBack != null) {
